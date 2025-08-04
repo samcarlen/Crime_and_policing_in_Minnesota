@@ -1,76 +1,76 @@
 library(tidyverse)
 
 # importing the NIBRS data (downloaded from the FBI website)
-NIBRS_ACTIVITY_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_ACTIVITY_TYPE.csv",col_types = cols(ACTIVITY_TYPE_CODE = col_factor(levels = c("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"))))
+NIBRS_ACTIVITY_TYPE <- read_csv("~PATH/MN_data/NIBRS_ACTIVITY_TYPE.csv",col_types = cols(ACTIVITY_TYPE_CODE = col_factor(levels = c("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"))))
 
-NIBRS_AGE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_AGE.csv")
+NIBRS_AGE <- read_csv("~PATH/MN_data/NIBRS_AGE.csv")
 
-NIBRS_ARREST_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_ARREST_TYPE.csv")
+NIBRS_ARREST_TYPE <- read_csv("~PATH/MN_data/NIBRS_ARREST_TYPE.csv")
 
-NIBRS_ARRESTEE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_ARRESTEE.csv", col_types = cols(MULTIPLE_INDICATOR = col_factor(levels = c("N", "C", "M")), SEX_CODE = col_factor(levels = c("M","F"))))
+NIBRS_ARRESTEE <- read_csv("~PATH/MN_data/NIBRS_ARRESTEE.csv", col_types = cols(MULTIPLE_INDICATOR = col_factor(levels = c("N", "C", "M")), SEX_CODE = col_factor(levels = c("M","F"))))
 
-NIBRS_ARRESTEE_WEAPON <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_ARRESTEE_WEAPON.csv")
+NIBRS_ARRESTEE_WEAPON <- read_csv("~PATH/MN_data/NIBRS_ARRESTEE_WEAPON.csv")
 
-NIBRS_ASSIGNMENT_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_ASSIGNMENT_TYPE.csv", col_types = cols(ASSIGNMENT_TYPE_CODE = col_factor(levels = c("F", "G", "H", "I", "J", "K", "L"))))
+NIBRS_ASSIGNMENT_TYPE <- read_csv("~PATH/MN_data/NIBRS_ASSIGNMENT_TYPE.csv", col_types = cols(ASSIGNMENT_TYPE_CODE = col_factor(levels = c("F", "G", "H", "I", "J", "K", "L"))))
 
-NIBRS_BIAS_LIST <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_BIAS_LIST.csv")
+NIBRS_BIAS_LIST <- read_csv("~PATH/MN_data/NIBRS_BIAS_LIST.csv")
 
-NIBRS_BIAS_MOTIVATION <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_BIAS_MOTIVATION.csv")
+NIBRS_BIAS_MOTIVATION <- read_csv("~PATH/MN_data/NIBRS_BIAS_MOTIVATION.csv")
 
-NIBRS_CIRCUMSTANCES <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_CIRCUMSTANCES.csv", col_types = cols(CIRCUMSTANCES_TYPE = col_factor(levels = c("A", "J", "N"))))
+NIBRS_CIRCUMSTANCES <- read_csv("~PATH/MN_data/NIBRS_CIRCUMSTANCES.csv", col_types = cols(CIRCUMSTANCES_TYPE = col_factor(levels = c("A", "J", "N"))))
 
-NIBRS_CLEARED_EXCEPT <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_CLEARED_EXCEPT.csv", col_types = cols(CLEARED_EXCEPT_CODE = col_factor(levels = c("A", "B", "C", "D", "E", "N"))))
+NIBRS_CLEARED_EXCEPT <- read_csv("~PATH/MN_data/NIBRS_CLEARED_EXCEPT.csv", col_types = cols(CLEARED_EXCEPT_CODE = col_factor(levels = c("A", "B", "C", "D", "E", "N"))))
 
-NIBRS_CRIMINAL_ACT <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_CRIMINAL_ACT.csv")
+NIBRS_CRIMINAL_ACT <- read_csv("~PATH/MN_data/NIBRS_CRIMINAL_ACT.csv")
 
-NIBRS_CRIMINAL_ACT_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_CRIMINAL_ACT_TYPE.csv", 
+NIBRS_CRIMINAL_ACT_TYPE <- read_csv("~PATH/MN_data/NIBRS_CRIMINAL_ACT_TYPE.csv", 
                                     col_types = cols(CRIMINAL_ACT_CODE = col_factor(levels = c("B","C", "D", "E", "O", "P", "T", "U","N", "G", "J", "A", "F", "I", "S"))))
 
-NIBRS_DRUG_MEASURE_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_DRUG_MEASURE_TYPE.csv",col_types = cols(DRUG_MEASURE_CODE = col_factor(levels = c("GM", "KG", "OZ", "LB", "ML", "LT", "FO", "GL", "DU", "NP", "XX"))))
+NIBRS_DRUG_MEASURE_TYPE <- read_csv("~PATH/MN_data/NIBRS_DRUG_MEASURE_TYPE.csv",col_types = cols(DRUG_MEASURE_CODE = col_factor(levels = c("GM", "KG", "OZ", "LB", "ML", "LT", "FO", "GL", "DU", "NP", "XX"))))
 
-NIBRS_ETHNICITY <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_ETHNICITY.csv", col_types = cols(ETHNICITY_CODE = col_factor(levels = c("M", "H", "N", "U"))))
+NIBRS_ETHNICITY <- read_csv("~PATH/MN_data/NIBRS_ETHNICITY.csv", col_types = cols(ETHNICITY_CODE = col_factor(levels = c("M", "H", "N", "U"))))
 
-NIBRS_INJURY <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_INJURY.csv", col_types = cols(INJURY_CODE = col_factor(levels = c("B", "I", "L", "M", "N", "O", "T", "U"))))
+NIBRS_INJURY <- read_csv("~PATH/MN_data/NIBRS_INJURY.csv", col_types = cols(INJURY_CODE = col_factor(levels = c("B", "I", "L", "M", "N", "O", "T", "U"))))
 
-NIBRS_JUSTIFIABLE_FORCE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_JUSTIFIABLE_FORCE.csv", col_types = cols(JUSTIFIABLE_FORCE_CODE = col_factor(levels = c("A", "B", "C", "D", "E", "F", "G", "U"))))
+NIBRS_JUSTIFIABLE_FORCE <- read_csv("~PATH/MN_data/NIBRS_JUSTIFIABLE_FORCE.csv", col_types = cols(JUSTIFIABLE_FORCE_CODE = col_factor(levels = c("A", "B", "C", "D", "E", "F", "G", "U"))))
 
-NIBRS_LOCATION_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_LOCATION_TYPE.csv", col_types = cols(LOCATION_CODE = col_factor(levels = c("01", "02", "03", "04", "05", "06", "07", "08", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "37", "38", "39", "40", "41", "42", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "09", "58", "00"))))
+NIBRS_LOCATION_TYPE <- read_csv("~PATH/MN_data/NIBRS_LOCATION_TYPE.csv", col_types = cols(LOCATION_CODE = col_factor(levels = c("01", "02", "03", "04", "05", "06", "07", "08", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "37", "38", "39", "40", "41", "42", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "09", "58", "00"))))
 
-NIBRS_OFFENDER <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_OFFENDER.csv", col_types = cols(SEX_CODE = col_factor(levels = c("M", "F", "U"))))
+NIBRS_OFFENDER <- read_csv("~PATH/MN_data/NIBRS_OFFENDER.csv", col_types = cols(SEX_CODE = col_factor(levels = c("M", "F", "U"))))
 
-NIBRS_OFFENSE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_OFFENSE.csv", col_types = cols(ATTEMPT_COMPLETE_FLAG = col_factor(levels = c("C", "A"))))
+NIBRS_OFFENSE <- read_csv("~PATH/MN_data/NIBRS_OFFENSE.csv", col_types = cols(ATTEMPT_COMPLETE_FLAG = col_factor(levels = c("C", "A"))))
 
-NIBRS_OFFENSE_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_OFFENSE_TYPE.csv")
+NIBRS_OFFENSE_TYPE <- read_csv("~PATH/MN_data/NIBRS_OFFENSE_TYPE.csv")
 
-NIBRS_PROP_DESC_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_PROP_DESC_TYPE.csv")
+NIBRS_PROP_DESC_TYPE <- read_csv("~PATH/MN_data/NIBRS_PROP_DESC_TYPE.csv")
 
-NIBRS_PROP_LOSS_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_PROP_LOSS_TYPE.csv")
+NIBRS_PROP_LOSS_TYPE <- read_csv("~PATH/MN_data/NIBRS_PROP_LOSS_TYPE.csv")
 
-NIBRS_PROPERTY <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_PROPERTY.csv")
+NIBRS_PROPERTY <- read_csv("~PATH/MN_data/NIBRS_PROPERTY.csv")
 
-NIBRS_PROPERTY_DESC <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_PROPERTY_DESC.csv")
+NIBRS_PROPERTY_DESC <- read_csv("~PATH/MN_data/NIBRS_PROPERTY_DESC.csv")
 
-NIBRS_RELATIONSHIP <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_RELATIONSHIP.csv", col_types = cols(RELATIONSHIP_CODE = col_factor(levels = c("AQ","BE", "BG", "CF", "CH", "CS", "EE", "ER", "FR", "GC", "GP", "HR", "IL", "NE", "OF", "OK", "PA", "RU", "SB","SC","SE","SP","SS","ST","VO","XS","XR"))))
+NIBRS_RELATIONSHIP <- read_csv("~PATH/MN_data/NIBRS_RELATIONSHIP.csv", col_types = cols(RELATIONSHIP_CODE = col_factor(levels = c("AQ","BE", "BG", "CF", "CH", "CS", "EE", "ER", "FR", "GC", "GP", "HR", "IL", "NE", "OF", "OK", "PA", "RU", "SB","SC","SE","SP","SS","ST","VO","XS","XR"))))
 
-NIBRS_SUSPECT_USING <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_SUSPECT_USING.csv")
+NIBRS_SUSPECT_USING <- read_csv("~PATH/MN_data/NIBRS_SUSPECT_USING.csv")
 
-NIBRS_VICTIM <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_VICTIM.csv")
+NIBRS_VICTIM <- read_csv("~PATH/MN_data/NIBRS_VICTIM.csv")
 
-NIBRS_VICTIM_CIRCUMSTANCES <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_VICTIM_CIRCUMSTANCES.csv")
+NIBRS_VICTIM_CIRCUMSTANCES <- read_csv("~PATH/MN_data/NIBRS_VICTIM_CIRCUMSTANCES.csv")
 
-NIBRS_VICTIM_INJURY <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_VICTIM_INJURY.csv")
+NIBRS_VICTIM_INJURY <- read_csv("~PATH/MN_data/NIBRS_VICTIM_INJURY.csv")
 
-NIBRS_VICTIM_OFFENDER_REL <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_VICTIM_OFFENDER_REL.csv")
+NIBRS_VICTIM_OFFENDER_REL <- read_csv("~PATH/MN_data/NIBRS_VICTIM_OFFENDER_REL.csv")
 
-NIBRS_VICTIM_INJURY <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_VICTIM_INJURY.csv")
+NIBRS_VICTIM_INJURY <- read_csv("~PATH/MN_data/NIBRS_VICTIM_INJURY.csv")
 
-NIBRS_VICTIM_TYPE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_VICTIM_TYPE.csv", col_types = cols(VICTIM_TYPE_CODE = col_factor(levels = c("B", "F", "G", "I", "L", "O", "R", "S", "U"))))
+NIBRS_VICTIM_TYPE <- read_csv("~PATH/MN_data/NIBRS_VICTIM_TYPE.csv", col_types = cols(VICTIM_TYPE_CODE = col_factor(levels = c("B", "F", "G", "I", "L", "O", "R", "S", "U"))))
 
-NIBRS_WEAPON <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/NIBRS_WEAPON.csv")
+NIBRS_WEAPON <- read_csv("~PATH/MN_data/NIBRS_WEAPON.csv")
 
-REF_RACE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/REF_RACE.csv")
+REF_RACE <- read_csv("~PATH/MN_data/REF_RACE.csv")
 
-REF_STATE <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/MN_data/REF_STATE.csv")
+REF_STATE <- read_csv("~PATH/MN_data/REF_STATE.csv")
 
 #########
 # data cleaning. Creating 2 datasets according to the main division in the dataset, that being between arrestees and offenders.
@@ -629,7 +629,7 @@ NIBRS_ETHNICITY <- NIBRS_ETHNICITY %>% rename(ETHNICITY_CODE = VIC_ETHNICITY_COD
 ######################
 # WaPo police shootings data
 
-fatal_police_shootings_data <- read_csv("//home/rstudio/courses/2019-20-semester2-mscs-264/Student A/carlen1/MSCS Final project/Crime_and_policing_in_America/fatal-police-shootings-data.csv")
+fatal_police_shootings_data <- read_csv("~PATH/fatal-police-shootings-data.csv")
 
 shootings_mn <- fatal_police_shootings_data %>%
   filter(state=="MN")
